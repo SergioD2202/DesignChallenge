@@ -1,0 +1,15 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../../../assets/background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .background {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("https://www.smashbros.com/data/bs/es_ES/en_GB/img/1_US.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.28;
+  }
+}
