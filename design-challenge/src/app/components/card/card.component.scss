@@ -1,0 +1,114 @@
+.container {
+  width: 213px;
+  height: 298px;
+  background-color: rgba(76,96,133,.15);
+  padding: 20px;
+  padding-top: 15px;
+  border-radius: 5px;
+
+  .top-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .on-sale {
+      margin-bottom: 20px;
+      .on-sale-container {
+        display: flex;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        font-size:10px;
+        font-weight: 300;
+        line-height:47px;
+        letter-spacing:1.28px;
+        text-align: center;
+        color: white;
+        margin-bottom: -10px;
+
+        .point {
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: #3dde9d;
+          margin-right: 5px;
+        }
+      }
+      .stock {
+        height: 22px;
+        background-color: transparent;
+        border-radius: 2px;
+        font-family: 'Roboto', sans-serif;
+        font-size:10px;
+        font-weight: 300;
+        letter-spacing:1.28px;
+        text-align: center;
+        color: #39e29d;
+        border: 1px solid #39e29d;
+      }
+    }
+
+    .amount-container {
+      width: 60px;
+      height: 43px;
+      display: flex;
+      color: white;
+      background-color: #363e53;
+      border: none;
+      border-radius: 5px;
+
+      .amount {
+        margin-left: 5px;
+        max-width: 50%;
+        color: white;
+        background-color: transparent;
+        border: none;
+        border-radius: 5px;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      .arrows-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-width: 10px;
+        min-height: 7px;
+      }
+    }
+
+
+  }
+
+
+}
+
+.arrow-up {
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+
+  border-bottom: 5px solid white;
+
+  transition: 0.6s;
+}
+
+.arrow-down {
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+
+  border-top: 5px solid white;
+
+  transition: 0.6s;
+}

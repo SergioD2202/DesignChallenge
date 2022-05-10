@@ -2,25 +2,68 @@
   <span class="title">Condimentum consectetur</span>
 
   <div class="form">
-    <select class="element" [style.width]="'15rem'" name="games" id="games">
-      <option value="dummy">Select a game</option>
-      <option value="dummy">Dummy</option>
-      <option value="dummy">Dummy</option>
-    </select>
 
-    <input class="element" [style.width]="'25rem'" type="text" name="search" id="search" placeholder="search">
+    <div class="select-container" [style.width]="'13rem'">
+      <img class="image" src="../../../assets/item-default.svg" alt="price.svg">
 
-    <select class="element" [style.width]="'10rem'" name="prices" id="prices">
-      <option value="dummy">Price</option>
-      <option value="dummy">Dummy</option>
-      <option value="dummy">Dummy</option>
-    </select>
+      <div class="select-box">
+        <select [style.width]="'10rem'" name="prices" id="prices">
+          <option value="dummy">Select a game</option>
+          <option value="dummy">Dummy</option>
+          <option value="dummy">Dummy</option>
+        </select>
+      </div>
+    </div>
 
-    <select class="element" [style.width]="'10rem'" name="item-types" id="item-types">
-      <option value="dummy">Item Type</option>
-      <option value="dummy">Dummy</option>
-      <option value="dummy">Dummy</option>
-    </select>
+    <div class="search-container">
+      <img class="image" src="../../../assets/svg-search-icon-9.jpg" alt="search.jpg">
+      <input type="text" name="search" id="search" placeholder="Search">
+    </div>
+
+    <div class="select-container">
+      <img class="image" src="../../../assets/item-bag.svg" alt="price.svg">
+
+      <div class="select-box">
+        <label>Price</label>
+        <select [style.width]="'10rem'" name="prices" id="prices">
+          <option value="dummy">All</option>
+          <option value="dummy">Dummy</option>
+          <option value="dummy">Dummy</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="select-container">
+      <img class="image" src="../../../assets/feather.svg" alt="feather.svg">
+      <div class="select-box">
+        <label>Item Type</label>
+        <select [style.width]="'10rem'" name="item-types" id="item-types">
+          <option value="dummy">All</option>
+          <option value="dummy">Dummy</option>
+          <option value="dummy">Dummy</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="top-flex">
+      <span>Showing 20 - from 125</span>
+
+      <div class="select-container">
+        <img class="image" src="../../../assets/filter.svg" alt="filter.svg">
+        <div class="select-box">
+          <label>Sorted By</label>
+          <select [style.width]="'10rem'" name="item-types" id="item-types">
+            <option value="dummy">Featured</option>
+            <option value="dummy">Dummy</option>
+            <option value="dummy">Dummy</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <app-card></app-card>
   </div>
 
 

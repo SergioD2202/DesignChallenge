@@ -1,1 +1,40 @@
-<p>card works!</p>
+<div class="container">
+
+  <!--Top content-->
+  <div class="top-flex">
+    <div class="on-sale">
+      <div class="on-sale-container" *ngIf="isOnSale">
+        <div class="point"></div>
+        <span>ON SALE</span>
+      </div>
+      <button class="stock" disabled>In stock</button>
+    </div>
+
+    <div class="amount-container">
+      <input class="amount" type="number" name="amount" id="amount" min="1" (keydown)="avoidDecimals($event)" [value]="amount">
+
+      <div class="arrows-container" (mouseenter)="hoverUnhover()" (mouseleave)="hoverUnhover()">
+        <div class="arrow-up" [style.display]="showArrows? 'block':'none'" (click)="upAmount()" [style.margin-bottom]="'5px'"></div>
+
+        <div class="arrow-down" [style.display]="showArrows? 'block':'none'" (click)="lowerAmount()"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--Main Content-->
+
+  <!--Icon-->
+
+  <!--Name-->
+
+  <!--Game-->
+
+  <!--Price-->
+
+  <!--Description-->
+
+  <!--Buttons-->
+</div>
+
+
