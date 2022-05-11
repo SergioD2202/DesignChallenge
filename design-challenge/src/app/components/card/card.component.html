@@ -24,17 +24,42 @@
 
   <!--Main Content-->
 
-  <!--Icon-->
+    <!--Icon-->
+  <img class="product-icon" [src]="productIcon" alt="product.png">
 
-  <!--Name-->
+  <div class="name-game-row">
+    <!--Name-->
+    <span class="product-name">{{productName}}</span>
 
-  <!--Game-->
+    <!--Game-->
+    <img class="game-icon" [src]="gameIcon" alt="game.svg">
+  </div>
+    <!--Price-->
+  <div class="price-row">
+    <span class="price">{{(isOnSale? salePrice:price) | currency:'USD'}}</span>
 
-  <!--Price-->
+    <span class="old-price" *ngIf="isOnSale">{{price | currency:'USD'}}</span>
+  </div>
 
-  <!--Description-->
+    <!--Description-->
+  <div class="description">
+    {{shortenDesc()}}
+  </div>
 
-  <!--Buttons-->
+    <!--Buttons-->
+  <div class="button-row">
+    <button class="details">DETAILS</button>
+
+    <button class="add">
+      <span>
+        ADD
+      </span>
+      <div class="cart-container">
+        <img src="../../../assets/cartchicksgold.svg" alt="cart.svg">
+      </div>
+    </button>
+  </div>
+
 </div>
 
 

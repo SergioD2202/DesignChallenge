@@ -1,5 +1,5 @@
 .container {
-  width: 60%;
+  width: 90%;
   min-height: 100vh;
   margin-top: 200px;
   margin-left: auto;
@@ -66,6 +66,33 @@
         color:#898c9a;
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
         Helvetica, Arial, "Lucida Grande", sans-serif;
+      }
+    }
+
+    .card-grid {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: 15px;
+      grid-row-gap: 15px;
+
+      @media screen and (max-width: 1600px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @media screen and (max-width: 1250px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media screen and (max-width: 950px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (max-width: 650px) {
+        grid-template-columns: 1fr;
       }
     }
   }

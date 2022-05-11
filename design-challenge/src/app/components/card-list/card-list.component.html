@@ -48,7 +48,7 @@
 
   <div class="card-container">
     <div class="top-flex">
-      <span>Showing 20 - from 125</span>
+      <span>Showing 15 - from 125</span>
 
       <div class="select-container">
         <img class="image" src="../../../assets/filter.svg" alt="filter.svg">
@@ -63,7 +63,11 @@
       </div>
     </div>
 
-    <app-card></app-card>
+    <div class="card-grid">
+      <ng-container *ngFor="let product of products">
+        <app-card></app-card>
+      </ng-container>
+    </div>
   </div>
 
 

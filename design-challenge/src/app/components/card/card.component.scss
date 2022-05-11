@@ -1,9 +1,9 @@
 .container {
-  width: 213px;
+  width: 14rem;
   height: 298px;
   background-color: rgba(76,96,133,.15);
   padding: 20px;
-  padding-top: 15px;
+  padding-top:0px;
   border-radius: 5px;
 
   .top-flex {
@@ -86,6 +86,122 @@
 
   }
 
+  .product-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 3px;
+  }
+
+  .name-game-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .product-name {
+      font-family: 'Roboto', sans-serif;
+      font-size:14px;
+      font-weight: 500;
+      letter-spacing:.68px;
+      text-align: left;
+      color:white;
+    }
+
+    .game-icon {
+      width: 30px;
+      height: 20px;
+      border-radius: 20px;
+      border: 1px solid #39e29d;
+      padding: 2px;
+    }
+  }
+
+  .price-row {
+    margin-top: 7px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+
+    .price {
+      font-family: 'Roboto', sans-serif;
+      font-size:12px;
+      font-weight: 500;
+      letter-spacing:.56px;
+      text-align: left;
+      color:white;
+      margin-right: 10px;
+    }
+
+    .old-price {
+      font-family: 'Roboto', sans-serif;
+      font-size:12px;
+      font-weight: 300;
+      letter-spacing:.56px;
+      text-align: left;
+      color:hsla(0,0%,100%,.75);
+      margin-right: 3px;
+      text-decoration: line-through;
+      text-decoration-color: red;
+    }
+  }
+
+  .description {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 12px;
+    letter-spacing: .52px;
+    color: hsla(0,0%,100%,.75);
+    margin-bottom: 15px;
+  }
+
+  .button-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .details {
+      width: 45%;
+      height: 44px;
+      border-radius: 5px;
+      background-color: rgba(250,252,255,.02);
+      border: none;
+      color: #999ba4;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+      Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 15px;
+      letter-spacing: .52px;
+    }
+
+    .add {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 45%;
+      height: 44px;
+      background-color: #5661d3;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: .52px;
+      color: white;
+
+      span {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cart-container {
+        width: 34px;
+        height: 34px;
+        border-radius: 5px;
+        background-color: #444da8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
 
 }
 

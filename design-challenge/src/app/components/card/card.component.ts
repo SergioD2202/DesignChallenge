@@ -17,6 +17,7 @@ export class CardComponent implements OnInit {
   @Input() price:number = 522.5;
   @Input() salePrice:number = 450;
   @Input() description:string = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias nobis nihil dolore vitae sunt a culpa assumenda possimus obcaecati, necessitatibus veritatis, labore ea accusantium quis mollitia deleniti odit eos.";
+  shortDesc:string = "";
   /**
    * cosas que tienen las cartas de los productos:
    *
@@ -59,5 +60,14 @@ export class CardComponent implements OnInit {
   //hover and unhover handler
   hoverUnhover() {
     this.showArrows = !this.showArrows;
+  }
+
+  //shorten the description
+  shortenDesc() {
+    if(this.description.length > 53) {
+      this.shortDesc = this.description.substring(0, 50) + '...';
+    }
+
+    return this.shortDesc;
   }
 }
