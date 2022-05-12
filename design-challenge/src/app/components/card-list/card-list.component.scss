@@ -25,6 +25,48 @@
     width: 100%;
     margin-bottom: 15px;
 
+    @media screen and (max-width:1190px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .search-container {
+        width: 100%;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-bottom: 15px;
+      }
+
+      .select-container {
+        display: none;
+        width: 50%;
+
+        &.game {
+          display: flex;
+          width: 100%;
+          margin-right: 0px;
+          margin-left: 0px;
+          margin-bottom: 15px;
+        }
+      }
+
+      .responsive-selects {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 15px;
+
+        .select-container {
+          display: flex;
+          margin-left: 0px;
+          margin-right: 0px;
+          width: 49%;
+        }
+      }
+    }
+
     .element {
       margin-right: 15px;
       background-color: rgba(76,96,133,.15);
@@ -62,7 +104,19 @@
       align-items: center;
       justify-content: space-between;
 
-      span {
+      @media screen and (max-width: 730px) {
+        .showing {
+          display: none;
+        }
+
+        .select-container {
+          width: 100% !important;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+
+      .showing {
         font-size: 14px;
         color:#898c9a;
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
@@ -106,7 +160,7 @@
 
 .search-container {
   display: flex;
-  width: 25rem;
+  width: 50%;
   align-items: center;
   margin-right: 15px;
   background-color: rgba(76,96,133,.15);
@@ -128,19 +182,31 @@
   }
 
   input[type=text] {
+    width: 93%;
     margin-left:5px;
     border: none;
     background-color: transparent;
+    color:white;
+    font-size: 18px;
     &::placeholder {
       color:#898c9a;
+      font-size: 18px;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
+}
+
+.responsive-selects {
+  display: none;
 }
 
 .select-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: auto;
   height: 50px;
   margin-right: 15px;
@@ -153,8 +219,17 @@
   letter-spacing: 0px;
   text-align: left;
 
+  &.game {
+    min-width: 20%;
+
+    @media screen and (max-width:1190px) {
+      width: 100%;
+    }
+  }
+
   .image {
     margin-left: 10px;
+    margin-right: 10px;
     max-width: 24px;
     max-height: 24px;
   }
@@ -164,25 +239,50 @@
     border: none;
   }
 
-  .select-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    label {
-      margin-left: 8px;
-      width: 80%;
-      font-size: 10px;
-      color:#898c9a;
+  label {
+    margin-left: 8px;
+    width: 80%;
+    font-size: 10px;
+    color:#898c9a;
+  }
+
+  select {
+    width: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    color: white;
+
+    option {
+      background-color: black;
     }
 
-    select {
-      margin-left: 5px;
-      width: 80%;
-      margin-right: 5px;
-      font-size: 14px;
-      background-color: transparent;
-      border: none;
-      color: white;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .select-content {
+    display: flex;
+    align-items: center;
+    width: 80%;
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      label {
+        min-width: 3rem;
+      }
+
+      span {
+        margin-top: 5px;
+        margin-left: 10px;
+      }
     }
   }
 }

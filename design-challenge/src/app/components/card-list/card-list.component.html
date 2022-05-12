@@ -4,42 +4,99 @@
   <!--Filters-->
   <div class="form">
 
-    <div class="select-container" [style.width]="'13rem'">
-      <img class="image" src="../../../assets/item-default.svg" alt="price.svg">
+    <!--Select a game-->
+    <div class="select-container game">
+      <div class="select-content">
+        <img class="image" src="../../../assets/item-default.svg" alt="price.svg">
+        <span>Select a game</span>
+      </div>
 
       <div class="select-box">
-        <select [style.width]="'10rem'" name="prices" id="prices">
-          <option value="dummy">Select a game</option>
+        <select name="prices" id="prices">
+          <option value=""></option>
+          <option value="dummy">Dummy</option>
           <option value="dummy">Dummy</option>
           <option value="dummy">Dummy</option>
         </select>
       </div>
     </div>
 
+    <!--Search bar-->
     <div class="search-container">
       <img class="image" src="../../../assets/svg-search-icon-9.jpg" alt="search.jpg">
       <input type="text" name="search" id="search" placeholder="Search">
     </div>
 
+    <!--Select Price-->
     <div class="select-container">
-      <img class="image" src="../../../assets/item-bag.svg" alt="price.svg">
 
-      <div class="select-box">
-        <label>Price</label>
-        <select [style.width]="'10rem'" name="prices" id="prices">
-          <option value="dummy">All</option>
+      <div class="select-content">
+        <img class="image" src="../../../assets/item-bag.svg" alt="price.svg">
+        <div class="description">
+          <label>Price</label>
+          <span>All</span>
+        </div>
+      </div>
+
+      <select name="prices" id="prices">
+        <option value=""></option>
+        <option value="dummy">Dummy</option>
+        <option value="dummy">Dummy</option>
+        <option value="dummy">Dummy</option>
+      </select>
+    </div>
+
+    <!--Select Item Type-->
+    <div class="select-container">
+      <div class="select-content">
+        <img class="image" src="../../../assets/feather.svg" alt="feather.svg">
+        <div class="description">
+          <label>Item Type</label>
+          <span>All</span>
+        </div>
+      </div>
+        <select name="item-types" id="item-types">
+          <option value=""></option>
+          <option value="dummy">Dummy</option>
+          <option value="dummy">Dummy</option>
+          <option value="dummy">Dummy</option>
+        </select>
+    </div>
+
+    <!--Mobile versions of price and item type-->
+    <div class="responsive-selects">
+      <!--Select Price-->
+      <div class="select-container">
+
+        <div class="select-content">
+          <img class="image" src="../../../assets/item-bag.svg" alt="price.svg">
+          <div class="description">
+            <label>Price</label>
+            <span>All</span>
+          </div>
+        </div>
+
+        <select name="prices" id="prices">
+          <option value=""></option>
+          <option value="dummy">Dummy</option>
           <option value="dummy">Dummy</option>
           <option value="dummy">Dummy</option>
         </select>
       </div>
-    </div>
 
-    <div class="select-container">
-      <img class="image" src="../../../assets/feather.svg" alt="feather.svg">
-      <div class="select-box">
-        <label>Item Type</label>
-        <select [style.width]="'10rem'" name="item-types" id="item-types">
-          <option value="dummy">All</option>
+      <!--Select Item Type-->
+      <div class="select-container">
+        <div class="select-content">
+          <img class="image" src="../../../assets/feather.svg" alt="feather.svg">
+          <div class="description">
+            <label>Item Type</label>
+            <span>All</span>
+          </div>
+        </div>
+
+        <select name="item-types" id="item-types">
+          <option value=""></option>
+          <option value="dummy">Dummy</option>
           <option value="dummy">Dummy</option>
           <option value="dummy">Dummy</option>
         </select>
@@ -51,18 +108,25 @@
   <div class="card-container">
     <!--Top content-->
     <div class="top-flex">
-      <span>Showing 15 - from 125</span>
+      <!--Showing-->
+      <span class="showing">Showing 15 - from {{products.length}}</span>
 
+      <!--Sorted By-->
       <div class="select-container">
-        <img class="image" src="../../../assets/filter.svg" alt="filter.svg">
-        <div class="select-box">
-          <label>Sorted By</label>
-          <select [style.width]="'10rem'" name="item-types" id="item-types">
-            <option value="dummy">Featured</option>
-            <option value="dummy">Dummy</option>
-            <option value="dummy">Dummy</option>
-          </select>
+        <div class="select-content">
+          <img class="image" src="../../../assets/filter.svg" alt="filter.svg">
+          <div class="description">
+            <label>Sorted By</label>
+            <span>Featured</span>
+          </div>
         </div>
+
+        <select name="item-types" id="sorted-by" id="sorted-by">
+          <option value=""></option>
+          <option value="dummy">Dummy</option>
+          <option value="dummy">Dummy</option>
+          <option value="dummy">Dummy</option>
+        </select>
       </div>
     </div>
 
