@@ -1,6 +1,7 @@
 <div class="container">
   <span class="title">Condimentum consectetur</span>
 
+  <!--Filters-->
   <div class="form">
 
     <div class="select-container" [style.width]="'13rem'">
@@ -46,7 +47,9 @@
     </div>
   </div>
 
+  <!--Cards container-->
   <div class="card-container">
+    <!--Top content-->
     <div class="top-flex">
       <span>Showing 15 - from 125</span>
 
@@ -63,9 +66,10 @@
       </div>
     </div>
 
+    <!--Card Grid-->
     <div class="card-grid">
       <ng-container *ngFor="let product of products">
-        <app-card></app-card>
+        <app-card [isOnSale]="product"></app-card>
       </ng-container>
     </div>
   </div>

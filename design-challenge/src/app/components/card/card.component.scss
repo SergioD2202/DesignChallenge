@@ -5,13 +5,26 @@
   padding: 20px;
   padding-top:0px;
   border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 730px) {
+    width: 30rem;
+  }
+
+  @media screen and (max-width: 620px) {
+    width: 20rem;
+  }
+
+  @media screen and (max-width: 440px) {
+    width: 15rem;
+  }
 
   .top-flex {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     .on-sale {
-      margin-bottom: 20px;
       .on-sale-container {
         display: flex;
         align-items: center;
@@ -47,6 +60,7 @@
     }
 
     .amount-container {
+      margin-top: 20px;
       width: 60px;
       height: 43px;
       display: flex;
@@ -87,6 +101,7 @@
   }
 
   .product-icon {
+    margin-top: 15px;
     width: 65px;
     height: 65px;
     border-radius: 3px;
@@ -159,6 +174,7 @@
     justify-content: space-between;
 
     .details {
+      cursor: pointer;
       width: 45%;
       height: 44px;
       border-radius: 5px;
@@ -172,6 +188,7 @@
     }
 
     .add {
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: space-between;

@@ -18,6 +18,8 @@ export class CardComponent implements OnInit {
   @Input() salePrice:number = 450;
   @Input() description:string = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias nobis nihil dolore vitae sunt a culpa assumenda possimus obcaecati, necessitatibus veritatis, labore ea accusantium quis mollitia deleniti odit eos.";
   shortDesc:string = "";
+
+
   /**
    * cosas que tienen las cartas de los productos:
    *
@@ -36,6 +38,7 @@ export class CardComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.shortenDesc();
   }
 
   //remove the notations of decimals and negative
