@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="20" viewBox="0 0 108 20">
+    <defs>
+        <style>
+            .cls-1{fill:#00b67a}.cls-2{fill:#fff}
+        </style>
+    </defs>
+    <g id="Stars" transform="translate(-1502 -1468)">
+        <g id="Star_1" transform="translate(64)">
+            <path id="Rectangle_205" d="M0 0H20V20H0z" class="cls-1" transform="translate(1438 1468)"/>
+            <g id="trustpilot-vector-logo" transform="translate(1419.501 1221.47)">
+                <path id="Subtraction_1" d="M3.136 15.633l1.945-5.974L0 5.963l6.283.011L8.228 0l1.934 5.974h6.283l-5.081 3.685-3.136 2.277 3.57-.927-.408-1.267 1.907 5.89-5.081-3.7-5.081 3.7z" class="cls-2" transform="translate(20.499 248.499)"/>
+            </g>
+        </g>
+        <g id="Star_2" transform="translate(86)">
+            <path id="Rectangle_205-2" d="M0 0H20V20H0z" class="cls-1" transform="translate(1438 1468)"/>
+            <g id="trustpilot-vector-logo-2" transform="translate(1419.501 1221.47)">
+                <path id="Subtraction_1-2" d="M3.136 15.633l1.945-5.974L0 5.963l6.283.011L8.228 0l1.934 5.974h6.283l-5.081 3.685-3.136 2.277 3.57-.927-.408-1.267 1.907 5.89-5.081-3.7-5.081 3.7z" class="cls-2" transform="translate(20.499 248.499)"/>
+            </g>
+        </g>
+        <g id="Star_3" transform="translate(108)">
+            <path id="Rectangle_205-3" d="M0 0H20V20H0z" class="cls-1" transform="translate(1438 1468)"/>
+            <g id="trustpilot-vector-logo-3" transform="translate(1419.501 1221.47)">
+                <path id="Subtraction_1-3" d="M3.136 15.633l1.945-5.974L0 5.963l6.283.011L8.228 0l1.934 5.974h6.283l-5.081 3.685-3.136 2.277 3.57-.927-.408-1.267 1.907 5.89-5.081-3.7-5.081 3.7z" class="cls-2" transform="translate(20.499 248.499)"/>
+            </g>
+        </g>
+        <g id="Star_4" transform="translate(130)">
+            <path id="Rectangle_205-4" d="M0 0H20V20H0z" class="cls-1" transform="translate(1438 1468)"/>
+            <g id="trustpilot-vector-logo-4" transform="translate(1419.501 1221.47)">
+                <path id="Subtraction_1-4" d="M3.136 15.633l1.945-5.974L0 5.963l6.283.011L8.228 0l1.934 5.974h6.283l-5.081 3.685-3.136 2.277 3.57-.927-.408-1.267 1.907 5.89-5.081-3.7-5.081 3.7z" class="cls-2" transform="translate(20.499 248.499)"/>
+            </g>
+        </g>
+        <g id="Star_5" transform="translate(152)">
+            <path id="Rectangle_205-5" d="M0 0H20V20H0z" class="cls-1" transform="translate(1438 1468)"/>
+            <g id="trustpilot-vector-logo-5" transform="translate(1419.501 1221.47)">
+                <path id="Subtraction_1-5" d="M3.136 15.633l1.945-5.974L0 5.963l6.283.011L8.228 0l1.934 5.974h6.283l-5.081 3.685-3.136 2.277 3.57-.927-.408-1.267 1.907 5.89-5.081-3.7-5.081 3.7z" class="cls-2" transform="translate(20.499 248.499)"/>
+            </g>
+        </g>
+    </g>
+</svg>

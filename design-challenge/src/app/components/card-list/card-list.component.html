@@ -8,15 +8,15 @@
     <div class="select-container game">
       <div class="select-content">
         <img class="image" src="../../../assets/item-default.svg" alt="price.svg">
-        <span>Select a game</span>
+        <span>{{gameSelect}}</span>
       </div>
 
       <div class="select-box">
-        <select name="prices" id="prices">
-          <option value=""></option>
-          <option value="dummy">Dummy</option>
-          <option value="dummy">Dummy</option>
-          <option value="dummy">Dummy</option>
+        <select name="games" id="games" (change)="onChangeFilter($event)">
+          <option value="Select a game">Select a game</option>
+          <option value="Game 1">Game 1</option>
+          <option value="Game 2">Game 2</option>
+          <option value="Game 3">Game 3</option>
         </select>
       </div>
     </div>
@@ -34,15 +34,15 @@
         <img class="image" src="../../../assets/item-bag.svg" alt="price.svg">
         <div class="description">
           <label>Price</label>
-          <span>All</span>
+          <span>{{priceSelect}}</span>
         </div>
       </div>
 
-      <select name="prices" id="prices">
-        <option value=""></option>
-        <option value="dummy">Dummy</option>
-        <option value="dummy">Dummy</option>
-        <option value="dummy">Dummy</option>
+      <select name="prices" id="prices" (change)="onChangeFilter($event)">
+        <option value="All">All</option>
+        <option value="Less than 100$">Less than 100$</option>
+        <option value="Less than 500$">Less than 500$</option>
+        <option value="More than 500$">More than 500$</option>
       </select>
     </div>
 
@@ -52,14 +52,14 @@
         <img class="image" src="../../../assets/feather.svg" alt="feather.svg">
         <div class="description">
           <label>Item Type</label>
-          <span>All</span>
+          <span>{{itemTypeSelect}}</span>
         </div>
       </div>
-        <select name="item-types" id="item-types">
-          <option value=""></option>
-          <option value="dummy">Dummy</option>
-          <option value="dummy">Dummy</option>
-          <option value="dummy">Dummy</option>
+        <select name="item-types" id="item-types" (change)="onChangeFilter($event)">
+          <option value="All">All</option>
+          <option value="Type 1">Type 1</option>
+          <option value="Type 2">Type 2</option>
+          <option value="Type 3">Type 3</option>
         </select>
     </div>
 
@@ -72,15 +72,15 @@
           <img class="image" src="../../../assets/item-bag.svg" alt="price.svg">
           <div class="description">
             <label>Price</label>
-            <span>All</span>
+            <span>{{priceSelect}}</span>
           </div>
         </div>
 
-        <select name="prices" id="prices">
-          <option value=""></option>
-          <option value="dummy">Dummy</option>
-          <option value="dummy">Dummy</option>
-          <option value="dummy">Dummy</option>
+        <select name="prices" id="prices" (change)="onChangeFilter($event)">
+          <option value="All">All</option>
+          <option value="Less than 100$">Less than 100$</option>
+          <option value="Less than 500$">Less than 500$</option>
+          <option value="More than 500$">More than 500$</option>
         </select>
       </div>
 
@@ -90,15 +90,15 @@
           <img class="image" src="../../../assets/feather.svg" alt="feather.svg">
           <div class="description">
             <label>Item Type</label>
-            <span>All</span>
+            <span>{{itemTypeSelect}}</span>
           </div>
         </div>
 
-        <select name="item-types" id="item-types">
-          <option value=""></option>
-          <option value="dummy">Dummy</option>
-          <option value="dummy">Dummy</option>
-          <option value="dummy">Dummy</option>
+        <select name="item-types" id="item-types" (change)="onChangeFilter($event)">
+          <option value="All">All</option>
+          <option value="Type 1">Type 1</option>
+          <option value="Type 2">Type 2</option>
+          <option value="Type 3">Type 3</option>
         </select>
       </div>
     </div>
@@ -117,15 +117,15 @@
           <img class="image" src="../../../assets/filter.svg" alt="filter.svg">
           <div class="description">
             <label>Sorted By</label>
-            <span>Featured</span>
+            <span>{{sortedBySelect}}</span>
           </div>
         </div>
 
-        <select name="item-types" id="sorted-by" id="sorted-by">
-          <option value=""></option>
-          <option value="dummy">Dummy</option>
-          <option value="dummy">Dummy</option>
-          <option value="dummy">Dummy</option>
+        <select name="sorted-by" id="sorted-by" id="sorted-by" (change)="onChangeFilter($event)">
+          <option value="Featured">Featured</option>
+          <option value="Criteria 1">Criteria 1</option>
+          <option value="Criteria 2">Criteria 2</option>
+          <option value="Criteria 3">Criteria 3</option>
         </select>
       </div>
     </div>
