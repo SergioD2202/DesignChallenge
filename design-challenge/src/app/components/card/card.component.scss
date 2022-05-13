@@ -59,41 +59,81 @@
       }
     }
 
-    .amount-container {
-      margin-top: 20px;
-      width: 60px;
-      height: 43px;
+    .counter-container {
       display: flex;
-      color: white;
-      background-color: #363e53;
-      border: none;
-      border-radius: 5px;
+      align-items: center;
 
-      .amount {
-        margin-left: 5px;
-        max-width: 50%;
+      button {
+        cursor: pointer;
+        display: none;
+        font-family: 'Roboto', sans-serif;
+        font-size:15px;
+        font-weight: 700;
+        letter-spacing:1.28px;
+        text-align: center;
         color: white;
-        background-color: transparent;
+        background-color: #5762d5;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 15px;
+        border: none;
+        border-radius: 5px;
+        width: 20px;
+        height: 20px;
+      }
+
+      .amount-container {
+        margin-top: 20px;
+        width: 60px;
+        height: 43px;
+        display: flex;
+        color: white;
+        background-color: #363e53;
         border: none;
         border-radius: 5px;
 
-        &:focus {
-          outline: none;
+        .amount {
+          margin-left: 5px;
+          max-width: 50%;
+          color: white;
+          background-color: transparent;
+          border: none;
+          border-radius: 5px;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
         }
 
-        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
+        .arrows-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          min-width: 10px;
+          min-height: 7px;
         }
       }
 
-      .arrows-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        min-width: 10px;
-        min-height: 7px;
+      @media screen and (max-width: 1420px) {
+        button {
+          display: block;
+        }
+
+        .amount-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .arrows-container {
+            display: none;
+          }
+        }
       }
     }
 

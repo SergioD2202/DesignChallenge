@@ -28,7 +28,7 @@
     </div>
 
     <!--Select Price-->
-    <div class="select-container">
+    <div class="select-container" [style.width]="'15%'">
 
       <div class="select-content">
         <img class="image" src="../../../assets/item-bag.svg" alt="price.svg">
@@ -47,7 +47,7 @@
     </div>
 
     <!--Select Item Type-->
-    <div class="select-container">
+    <div class="select-container" [style.width]="'15%'">
       <div class="select-content">
         <img class="image" src="../../../assets/feather.svg" alt="feather.svg">
         <div class="description">
@@ -112,7 +112,7 @@
       <span class="showing">Showing 15 - from {{products.length}}</span>
 
       <!--Sorted By-->
-      <div class="select-container">
+      <div class="select-container" [style.width]="'200px'">
         <div class="select-content">
           <img class="image" src="../../../assets/filter.svg" alt="filter.svg">
           <div class="description">
@@ -132,9 +132,26 @@
 
     <!--Card Grid-->
     <div class="card-grid">
-      <ng-container *ngFor="let product of products">
+      <ng-container *ngFor="let product of pageProducts">
         <app-card [isOnSale]="product"></app-card>
       </ng-container>
+    </div>
+
+    <!--Paginator-->
+    <div class="paginator-container">
+        <div class="paginator" *ngIf="isLoaded">
+          <button [style.border]="'1px solid #5762d5'" [style.background-color]="'transparent'" *ngIf="currentPage > 1" (click)="previousPage()"><div class="arrow left"></div></button>
+
+          <ng-container *ngFor="let item of [].constructor(pageCount-1); let i = index">
+            <button [ngClass]="currentPage === i+1? 'active page-'+(i+1):'not-active page-'+(i+1)"
+            *ngIf="i >= currentPage-1 && i <= currentPage+1"(click)="changePage(i+1)">{{i+1}}</button>
+          </ng-container>
+
+          <button class="not-active" [style.width]="'35px'"><input type="number" name="selectPage" id="selectPage" placeholder="..." (keyup.enter)="changePageEvent($event)"></button>
+
+          <button [ngClass]="currentPage === pageCount? 'active page-'+pageCount:'not-active page-'+pageCount" (click)="changePage(pageCount)">{{pageCount}}</button>
+          <button [style.border]="'1px solid #5762d5'" [style.background-color]="'transparent'" *ngIf="currentPage < pageCount" (click)="nextPage()"><div class="arrow right"></div></button>
+        </div>
     </div>
   </div>
 

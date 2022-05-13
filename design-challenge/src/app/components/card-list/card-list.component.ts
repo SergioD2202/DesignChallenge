@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardListComponent implements OnInit {
 
-  products:any[] = [true,false,true,false,true,false,false,false,true,true,false,false,true,true,true];
+  //products: an array of booleans to trigger one of two templates in the card component
+  products:any[] = [true,false,true,false,true,false,false,false,true,true,false,false,true,true,true, true, true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,false,false,false,false,false,true,false,true,false,true,false,false,false,true,true,false,false,true,true,true, true, true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,false,false,false,false,false];
+  pageProducts:any[] = [];
+  currentPage:number = 1;
+  pageCount: number = Math.ceil(this.products.length/15);
+  isLoaded:boolean = true;
 
   //Select words
 
@@ -20,6 +25,9 @@ export class CardListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    for(let i = 0;i<15;i++) {
+      this.pageProducts.push(this.products[i]);
+    }
   }
 
   onChangeFilter(event:any) {
@@ -40,6 +48,52 @@ export class CardListComponent implements OnInit {
       case 'sorted-by':
         this.sortedBySelect = event.target.value;
         break;
+    }
+  }
+
+  changePage(page:number) {
+    this.currentPage = page;
+
+    this.pageProducts = [];
+
+    for(let i = 0 + ((this.currentPage-1)*15);i<0 + ((this.currentPage-1)*15)+15;i++) {
+      this.pageProducts.push(this.products[i]);
+    }
+  }
+
+  changePageEvent(event:any) {
+    if(event.target.value > 0 && event.target.value <= this.pageCount) {
+      this.currentPage = event.target.value;
+
+      this.pageProducts = [];
+
+      for(let i = 0 + ((this.currentPage-1)*15);i<0 + ((this.currentPage-1)*15)+15;i++) {
+        this.pageProducts.push(this.products[i]);
+      }
+
+      const currentPageElement:any =document.querySelector('.page-'+this.currentPage);
+
+      currentPageElement?.click();
+    }
+  }
+
+  nextPage() {
+    this.currentPage += 1;
+
+    this.pageProducts = [];
+
+    for(let i = 0 + ((this.currentPage-1)*15);i<0 + ((this.currentPage-1)*15)+15;i++) {
+      this.pageProducts.push(this.products[i]);
+    }
+  }
+
+  previousPage() {
+    this.currentPage -= 1;
+
+    this.pageProducts = [];
+
+    for(let i = 0 + ((this.currentPage-1)*15);i<0 + ((this.currentPage-1)*15)+15;i++) {
+      this.pageProducts.push(this.products[i]);
     }
   }
 
